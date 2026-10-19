@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AN">
+  <rect width="64" height="64" rx="14" fill="#342927"/>
+  <path d="M0 55 14 47l9 5 13-10 12 8 16-9v23H0Z" fill="#c6958e"/>
+  <text x="32" y="41" text-anchor="middle" fill="#fffaf5" font-family="Georgia, 'Times New Roman', serif" font-size="35" font-weight="700" letter-spacing="-3">AN</text>
+</svg>

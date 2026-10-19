@@ -1160,6 +1160,10 @@
   [
     "關於我",
     "About"
+  ],
+  [
+    "專題競賽佳作",
+    "Project Competition — Honorable Mention"
   ]
 ];
   const languageStorageKey = 'anke-portfolio-language';

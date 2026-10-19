@@ -1,6 +1,15 @@
 (() => {
   const root = document.querySelector("#chair-app-demo");
   if (!root) return;
+  const phoneClock = root.querySelector("[data-app-clock]");
+  function updatePhoneClock() {
+    if (!phoneClock) return;
+    const now = new Date();
+    const time = `${now.getHours()}:${String(now.getMinutes()).padStart(2, "0")}`;
+    if (phoneClock.textContent !== time) phoneClock.textContent = time;
+  }
+  updatePhoneClock();
+  document.addEventListener("visibilitychange", updatePhoneClock);
   // Scale the complete 360 × 776 phone, including its content and border.
   function resizePhone() {
     const scale = Math.min(window.innerHeight * 0.8 / 776, root.clientWidth / 360);
@@ -86,7 +95,6 @@
     "14:13:52",
     "14:07:44",
     "11:04:57",
-    "11:03:05",
     "10:58:27",
   ];
   const descriptions = {
@@ -170,7 +178,14 @@
     } else if (state.view === "music") {
       screen.innerHTML = `${timer("music-timer", state.musicMinutes)}<label class="app-select">曲風<select id="music-genre" aria-label="音樂曲風">${["輕鬆", "歡樂", "流行"].map((v) => `<option value="${v}" ${v === state.genre ? "selected" : ""}>${v}</option>`).join("")}</select></label><div class="app-panel"><div class="app-music-title"><span aria-hidden="true">♫</span><strong>${trackTitle()}</strong><small>${state.playing ? "播放中" : "已暫停"}</small></div><div class="app-player-buttons"><button data-app-action="prev" aria-label="上一首">Ⅰ◀</button><button data-app-action="play" aria-label="${state.playing ? "暫停" : "播放"}音樂">${state.playing ? "Ⅱ" : "▶"}</button><button data-app-action="next" aria-label="下一首">▶Ⅰ</button></div><small class="app-timer-readout" id="music-remaining">${state.playing && state.musicRemaining ? `剩餘 ${clock(state.musicRemaining)}` : "播放狀態模擬 · 無音訊"}</small></div><div class="app-panel"><label for="music-volume">音量大小 <output id="volume-value">${state.volume}%</output></label><input id="music-volume" type="range" min="0" max="100" value="${state.volume}" /><div class="app-range-labels"><span>靜音</span><span>最大</span></div></div>`;
     } else {
-      screen.innerHTML = `<p class="app-record-date">06/09 · 示範紀錄</p><div class="app-records">${records.map((time) => `<div class="app-panel app-record"><span aria-hidden="true">●</span><div><strong>偵測到哭聲</strong><small>時間 ${time}</small></div></div>`).join("")}</div>`;
+      const today = new Date();
+      screen.innerHTML = [0, 1].map((daysAgo) => {
+        const date = new Date(today);
+        date.setDate(date.getDate() - daysAgo);
+        const label = `${date.getFullYear()}/${String(date.getMonth() + 1).padStart(2, "0")}/${String(date.getDate()).padStart(2, "0")}`;
+        const dailyRecords = daysAgo === 0 ? records.slice(0, 1) : records.slice(1);
+        return `<p class="app-record-date">${label} · 示範紀錄</p><div class="app-records">${dailyRecords.map((time) => `<div class="app-panel app-record"><span aria-hidden="true">●</span><div><strong>偵測到哭聲</strong><small>時間 ${time}</small></div></div>`).join("")}</div>`;
+      }).join("");
     }
   }
   root.addEventListener("click", (event) => {
@@ -295,6 +310,7 @@
     }
   });
   setInterval(() => {
+    updatePhoneClock();
     if (state.running && state.remaining > 0) {
       state.remaining--;
       if (!state.remaining) {

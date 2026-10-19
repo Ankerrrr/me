@@ -1,3 +1,66 @@
+// Keep navigation open through the cover, then retract with the first content section.
+(() => {
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+  const firstCard = document.querySelector('#profile');
+  let lastY = Math.max(0, window.scrollY);
+  let collapse = 0;
+  let upwardDistance = 0;
+  let frame = null;
+
+  function paintHeader() {
+    header.style.setProperty('--nav-collapse', collapse.toFixed(4));
+    header.classList.toggle('is-hidden', collapse >= 1);
+  }
+  function revealHeader(animate = true) {
+    header.classList.remove('is-tracking');
+    if (animate && collapse > 0) header.classList.add('is-returning');
+    collapse = 0;
+    upwardDistance = 0;
+    paintHeader();
+  }
+  function updateHeaderHeight() {
+    document.documentElement.style.setProperty('--site-header-height', `${header.offsetHeight}px`);
+  }
+  function updateHeader() {
+    frame = null;
+    const maxY = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+    const y = Math.min(maxY, Math.max(0, window.scrollY));
+    const delta = y - lastY;
+    const firstCardTop = firstCard ? firstCard.getBoundingClientRect().top + window.scrollY : window.innerHeight;
+    const collapseStart = Math.max(0, firstCardTop - header.offsetHeight);
+    header.classList.toggle('is-scrolled', y > 24);
+    if (y <= collapseStart || header.querySelector(':focus-visible')) {
+      revealHeader(false);
+    } else if (delta > 0) {
+      upwardDistance = 0;
+      header.classList.remove('is-returning');
+      header.classList.add('is-tracking');
+      const travel = y - Math.max(lastY, collapseStart);
+      collapse = Math.min(1, collapse + travel / (header.offsetHeight + 64));
+      paintHeader();
+    } else if (delta < 0) {
+      upwardDistance += -delta;
+      if (upwardDistance >= 8) revealHeader();
+    }
+    lastY = y;
+  }
+  function scheduleHeader() {
+    if (frame === null) frame = requestAnimationFrame(updateHeader);
+  }
+  header.addEventListener('focusin', () => revealHeader());
+  header.addEventListener('animationend', event => {
+    if (event.animationName === 'nav-sheen') header.classList.remove('is-returning');
+  });
+  window.addEventListener('scroll', scheduleHeader, { passive: true });
+  window.addEventListener('resize', scheduleHeader, { passive: true });
+  window.addEventListener('pageshow', scheduleHeader);
+  if ('ResizeObserver' in window) new ResizeObserver(updateHeaderHeight).observe(header);
+  else window.addEventListener('resize', updateHeaderHeight, { passive: true });
+  updateHeaderHeight();
+  updateHeader();
+})();
+
 (() => {
   const timeline = document.querySelector('.timeline');
   if (!timeline) return;

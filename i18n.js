@@ -683,7 +683,7 @@
   ],
   [
     "黃安可 · AN-KE HUANG",
-    "An-Ke Huang · PORTFOLIO"
+    "AN-KE HUANG"
   ],
   [
     "回到頂端 ↑",

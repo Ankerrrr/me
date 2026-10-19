@@ -148,7 +148,21 @@ footer{flex-wrap:wrap}
 
 /* Sunset mountain cover with a translucent typewriter panel. */
 .sunset-hero{position:relative;isolation:isolate;min-height:100svh;display:flex;align-items:center;justify-content:center;padding:120px 28px 110px;overflow:hidden;background:linear-gradient(155deg,#f5d58c 0%,#f6e4a3 28%,#ffd0a0 58%,#efa1a0 100%);color:#6b5836}
-.site-header{position:absolute;top:0;left:0;right:0;z-index:5;background:transparent;border-bottom:1px solid #82684822;color:#594631}
+.site-header{--nav-collapse:0;position:fixed;top:0;left:0;right:0;z-index:30;isolation:isolate;background:transparent;border-bottom:1px solid #82684822;color:#594631;transform:translate3d(0,calc(-112% * var(--nav-collapse)),0) scale(calc(1 - .06 * var(--nav-collapse)));transform-origin:top center;opacity:calc(1 - var(--nav-collapse));border-radius:0 0 calc(28px * var(--nav-collapse)) calc(28px * var(--nav-collapse));transition:transform .72s cubic-bezier(.16,1.18,.3,1),opacity .34s ease,border-radius .55s ease,background-color .35s ease,box-shadow .35s ease,border-color .35s ease}
+.site-header.is-scrolled{background:rgba(255,248,239,.88);border-bottom-color:#e6b6a66b;box-shadow:0 10px 36px #79533b14,inset 0 1px #fff9;-webkit-backdrop-filter:blur(20px) saturate(1.3);backdrop-filter:blur(20px) saturate(1.3)}
+.site-header.is-tracking{transition:background-color .35s ease,box-shadow .35s ease,border-color .35s ease}
+.site-header.is-hidden{pointer-events:none}
+.site-header{overflow:clip}
+.site-header::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;pointer-events:none;background:linear-gradient(110deg,transparent 15%,#fff9 42%,#ffd0bb66 51%,transparent 76%);opacity:0;transform:translateX(-60%)}
+.site-header::after{content:"";position:absolute;bottom:-1px;left:12%;right:12%;height:2px;pointer-events:none;background:linear-gradient(90deg,transparent,#e6b4a3,#f2d69c,#e6b4a3,transparent);opacity:0;transform:scaleX(.5);transition:opacity .4s ease,transform .65s cubic-bezier(.22,1,.36,1)}
+.site-header.is-scrolled::after{opacity:.8;transform:scaleX(1)}
+.site-header.is-returning::before{animation:nav-sheen .9s ease-out both}
+@keyframes nav-sheen{0%{opacity:0;transform:translateX(-60%)}25%{opacity:.65}100%{opacity:0;transform:translateX(60%)}}
+html{scroll-padding-top:calc(var(--site-header-height,110px) + 16px)}
+.header-navigation .header-link{position:relative}
+.header-navigation .header-link::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .25s cubic-bezier(.22,1,.36,1)}
+.header-navigation .header-link:hover::after,.header-navigation .header-link:focus-visible::after{transform:scaleX(1)}
+@media(prefers-reduced-motion:reduce){.site-header,.site-header.is-tracking,.site-header::after,.header-navigation .header-link::after{transition:none}.site-header.is-returning::before{animation:none}}
 .site-header .brand span,.site-header .header-link{color:#795d43}
 .sunset-glow{position:absolute;z-index:-3;inset:0;background:radial-gradient(ellipse at 70% 15%,#fff8c7b3,transparent 60%);pointer-events:none}
 .mountain{position:absolute;left:-3%;width:106%;pointer-events:none;z-index:-1;clip-path:polygon(0 42%,3% 35%,6% 38%,9% 27%,12% 34%,15% 31%,18% 43%,21% 38%,24% 49%,27% 45%,30% 50%,33% 39%,36% 44%,39% 32%,42% 37%,45% 24%,48% 29%,51% 19%,54% 25%,57% 13%,60% 16%,63% 7%,66% 11%,69% 3%,72% 8%,75% 19%,78% 15%,81% 23%,84% 10%,87% 17%,90% 7%,93% 15%,96% 12%,100% 24%,100% 100%,0 100%)}

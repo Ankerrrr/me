@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="黃安可，國立虎尾科技大學資訊工程系，預計 2027 年 6 月畢業。尋找軟體工程實習機會，具備程式設計、AI 資料處理與系統整合經驗。" />
+      content="An-Ke Huang, Computer Science and Information Engineering student at National Formosa University, graduating in June 2027. Seeking a software engineering internship, with experience in programming, AI data processing, and system integration."  data-i18n-attrs="{&quot;content&quot;: &quot;172&quot;}"/>
     <meta name="theme-color" content="#ffcccc" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <title>An-Ke Huang</title>
@@ -26,6 +26,7 @@
     </script>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="app-demo.css" />
+    <script src="i18n.js" defer></script>
     <script src="script.js" defer></script>
     <script src="motion.js" defer></script>
     <noscript
@@ -42,14 +43,24 @@
   </head>
   <body id="top">
     <header class="site-header">
-      <a class="brand" href="#top">黃安可<span>AN-KE HUANG</span></a>
+      <a class="brand" href="#top"><i18n-text data-i18n="0">An-Ke Huang</i18n-text><span>AN-KE HUANG</span></a>
       <nav class="header-navigation" aria-label="Main navigation">
+        <a class="header-link" href="#profile"
+          ><i18n-text data-i18n="289">About</i18n-text> <span aria-hidden="true">↘</span></a
+        >
+        <a class="header-link" href="#certifications"
+          ><i18n-text data-i18n="35">Certifications</i18n-text> <span aria-hidden="true">↘</span></a
+        >
         <a class="header-link" href="#projects"
-          >專題作品 <span aria-hidden="true">↘</span></a
+          ><i18n-text data-i18n="1">Projects</i18n-text> <span aria-hidden="true">↘</span></a
         >
         <a class="header-link" href="#timeline"
-          >個人生涯 <span aria-hidden="true">↘</span></a
+          ><i18n-text data-i18n="2">Timeline</i18n-text> <span aria-hidden="true">↘</span></a
         >
+        <div class="language-switch" role="group" aria-label="Language / 語言">
+          <button type="button" data-language="en" aria-pressed="true" lang="en">EN</button>
+          <button type="button" data-language="zh-Hant" aria-pressed="false" lang="zh-Hant">中文</button>
+        </div>
       </nav>
     </header>
     <main>
@@ -66,8 +77,8 @@
             ><span class="typing-cursor" aria-hidden="true"></span>
           </h1>
           <div class="hero-details">
-            <p class="hero-study">資訊工程系 <span>尋找大四實習</span></p>
-            <p class="hero-passion">熱愛程式設計，享受用科技解決問題的過程。</p>
+            <p class="hero-study"><i18n-text data-i18n="3">Computer Science &amp; Information Engineering</i18n-text> <span><i18n-text data-i18n="4">Seeking a senior-year internship</i18n-text></span></p>
+            <p class="hero-passion"><i18n-text data-i18n="5">I love programming and solving problems through technology.</i18n-text></p>
           </div>
         </div>
         <a class="hero-scroll-link" href="#profile"
@@ -80,87 +91,87 @@
         class="profile-summary"
         aria-labelledby="profile-name">
         <div class="profile-container">
-          <h2 id="profile-name">黃安可 <span>An-Ke Huang</span></h2>
+          <h2 id="profile-name"><i18n-text data-i18n="0">An-Ke Huang</i18n-text> <span>An-Ke Huang</span></h2>
           <div class="profile-bio">
             <p>
-              我想要成為一位厲害的軟體工程師!
+              <i18n-text data-i18n="6">I aspire to become a great software engineer!</i18n-text>
             </p>
             <p>
-             目前就讀國立虎尾科技大學資訊工程系四年級，高中畢業於屏東高工電機科。進入資工系後，我認真學習資料結構、演算法、作業系統等核心課程，並利用課餘時間練習 LeetCode 題目及開發 Side Projects，持續精進程式設計與問題解決能力。大學期間也積極參與程式設計與專題競賽，透過實際挑戰累積經驗，從中學習團隊合作、技術應用與解決問題的方法。
+             <i18n-text data-i18n="7">I am a senior studying Computer Science and Information Engineering at National Formosa University, with a background in Electrical Engineering from Pingtung Industrial Vocational High School. My studies include data structures, algorithms, and operating systems. Outside class, I practice on LeetCode and build side projects to improve my programming and problem-solving skills. Programming and project competitions have also helped me gain practical experience in teamwork and applying technology.</i18n-text>
             </p>
             <p>
-            為了從實務中累積經驗，我主動尋找實習機會並應徵，自從 2026 年 7 月開始在 Panasonic PAVCTW 事業部擔任 IT 實習生，累積了許多企業實務經驗，但由於製造業的工作以既有系統維護與改善為主讓我更加渴望挑戰不同的技術與開發環境。未來希望加入更具挑戰性的軟體開發團隊，持續精進技術，累積解決實際問題的能力，朝理想中的軟體工程師邁進！
+            <i18n-text data-i18n="8">To gain practical experience, I actively sought an internship and joined Panasonic PAVCTW as an IT intern in July 2026. This role has given me valuable industry experience. Working mainly on maintaining and improving existing manufacturing systems has also motivated me to explore new technologies and development environments. I hope to join a software development team where I can take on new challenges, strengthen my technical skills, and grow as an engineer.</i18n-text>
             </p>
           </div>
           <img
             class="profile-photo"
             src="assets/p1-2.jpeg"
-            alt="黃安可的個人照片"
+            alt="Portrait of An-Ke Huang"
             width="172"
             height="240"
-            fetchpriority="high" />
+            fetchpriority="high"  data-i18n-attrs="{&quot;alt&quot;: &quot;173&quot;}"/>
           <dl class="profile-facts">
             <div>
-              <dt>就讀學校</dt>
-              <dd>國立虎尾科技大學<br />資訊工程系</dd>
+              <dt><i18n-text data-i18n="9">Education</i18n-text></dt>
+              <dd><i18n-text data-i18n="10">National Formosa University</i18n-text><br /><i18n-text data-i18n="3">Computer Science &amp; Information Engineering</i18n-text></dd>
             </div>
             <div>
-              <dt>預計畢業</dt>
-              <dd>2027 年 6 月</dd>
+              <dt><i18n-text data-i18n="11">Expected graduation</i18n-text></dt>
+              <dd><i18n-text data-i18n="12">June 2027</i18n-text></dd>
             </div>
             <div>
-              <dt>目標職位</dt>
-              <dd>軟體工程實習生</dd>
+              <dt><i18n-text data-i18n="13">Seeking</i18n-text></dt>
+              <dd><i18n-text data-i18n="14">Software Engineering Intern</i18n-text></dd>
             </div>
             <div>
-              <dt>實習配合時間</dt>
-              <dd>課程已修畢，無須返校上課，實習時間皆可配合。</dd>
+              <dt><i18n-text data-i18n="15">Availability</i18n-text></dt>
+              <dd><i18n-text data-i18n="16">All coursework completed; available for a full-time internship without returning to campus for classes.</i18n-text></dd>
             </div>
           </dl>
-          <ul class="profile-highlights" aria-label="經歷">
+          <ul class="profile-highlights" aria-label="Experience" data-i18n-attrs="{&quot;aria-label&quot;: &quot;21&quot;}">
             <li>
-              <h3 class="highlight-label">專題競賽</h3>
+              <h3 class="highlight-label"><i18n-text data-i18n="17">Project competitions</i18n-text></h3>
               <div class="highlight-details">
-                <p class="highlight-result"><strong>盛群盃</strong><span class="highlight-award">銅牌</span></p>
-                <p class="highlight-result"><strong>晶心盃</strong><span class="highlight-award">銅牌</span></p>
+                <p class="highlight-result"><strong><i18n-text data-i18n="18">Holtek MCU Contest</i18n-text></strong><span class="highlight-award"><i18n-text data-i18n="19">Bronze</i18n-text></span></p>
+                <p class="highlight-result"><strong><i18n-text data-i18n="20">Andes Competition</i18n-text></strong><span class="highlight-award"><i18n-text data-i18n="19">Bronze</i18n-text></span></p>
               </div>
             </li>
             <li>
-              <h3 class="highlight-label">經歷</h3>
+              <h3 class="highlight-label"><i18n-text data-i18n="21">Experience</i18n-text></h3>
               <div class="highlight-details">
-                <p class="highlight-result"><strong>Python</strong><span class="highlight-award">教學助理</span></p>
-                <p class="highlight-result"><strong>校內讀書會</strong><span class="highlight-award">輔導員</span></p>
-                 <p class="highlight-result"><strong>松下電腦 IT實習</strong><span class="highlight-award">大四實習</span></p>
+                <p class="highlight-result"><strong>Python</strong><span class="highlight-award"><i18n-text data-i18n="22">Teaching Assistant</i18n-text></span></p>
+                <p class="highlight-result"><strong><i18n-text data-i18n="23">Campus study group</i18n-text></strong><span class="highlight-award"><i18n-text data-i18n="24">Mentor</i18n-text></span></p>
+                 <p class="highlight-result"><strong><i18n-text data-i18n="25">Panasonic IT Internship</i18n-text></strong><span class="highlight-award"><i18n-text data-i18n="26">Senior-year internship</i18n-text></span></p>
               </div>
             </li>
             <li>
-              <h3 class="highlight-label">程式競賽</h3>
+              <h3 class="highlight-label"><i18n-text data-i18n="27">Programming contests</i18n-text></h3>
               <div class="highlight-details">
-                <p class="highlight-result"><strong>ICPC</strong><span class="highlight-award">佳作</span></p>
-                <p class="highlight-result"><strong>NCPC</strong><span class="highlight-award">晉級全國賽</span></p>
-                <p class="highlight-result"><strong>Formosa</strong><span class="highlight-award">佳作</span></p>
+                <p class="highlight-result"><strong>ICPC</strong><span class="highlight-award"><i18n-text data-i18n="28">Honorable Mention</i18n-text></span></p>
+                <p class="highlight-result"><strong>NCPC</strong><span class="highlight-award"><i18n-text data-i18n="29">National finalist</i18n-text></span></p>
+                <p class="highlight-result"><strong>Formosa</strong><span class="highlight-award"><i18n-text data-i18n="28">Honorable Mention</i18n-text></span></p>
               </div>
             </li>
             <li>
-              <h3 class="highlight-label">學業</h3>
+              <h3 class="highlight-label"><i18n-text data-i18n="30">Academics</i18n-text></h3>
               <div class="highlight-details">
                 <div class="highlight-rank-row">
-                  <strong class="highlight-rank">前 <span>15</span><small>%</small></strong>
-                  <span class="highlight-rank-label">系排名</span>
+                  <strong class="highlight-rank"><i18n-text data-i18n="31">Top</i18n-text> <span>15</span><small>%</small></strong>
+                  <span class="highlight-rank-label"><i18n-text data-i18n="32">in the department</i18n-text></span>
                 </div>
               </div>
-              <p class="highlight-note">大二、大三皆達成</p>
+              <p class="highlight-note"><i18n-text data-i18n="33">In both sophomore and junior years</i18n-text></p>
             </li>
           </ul>
-          <nav class="profile-links" aria-label="聯絡方式與履歷">
+          <nav class="profile-links" aria-label="Contact and resume" data-i18n-attrs="{&quot;aria-label&quot;: &quot;174&quot;}">
             <a
               class="profile-button profile-button-primary"
               href="mailto:a9403230430amos@gmail.com"
               data-email-dialog
-              aria-label="聯絡我：查看信箱"
+              aria-label="Contact me: view email address"
               aria-haspopup="dialog"
               aria-controls="email-dialog"
-              ><svg
+               data-i18n-attrs="{&quot;aria-label&quot;: &quot;175&quot;}"><svg
                 class="profile-link-icon"
                 viewBox="0 0 24 24"
                 fill="none"
@@ -197,50 +208,50 @@
                 aria-hidden="true">
                 <path
                   d="M12 3v12m-4-4 4 4 4-4M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3" /></svg
-              >履歷</a
+              ><i18n-text data-i18n="34">Resume</i18n-text></a
             >
           </nav>
         </div>
       </section>
       <section class="certifications-section" id="certifications" aria-labelledby="certifications-heading">
         <div class="certifications-container">
-          <h2 id="certifications-heading">專業證照</h2>
+          <h2 id="certifications-heading"><i18n-text data-i18n="35">Certifications</i18n-text></h2>
           <ul class="certifications-grid">
             <li class="certification-card">
               <div class="certification-image"><div class="certification-photo">
-                <img src="assets/cert-linux.png" alt="TQC Linux 系統管理專業級證書" width="963" height="681" loading="lazy" />
+                <img src="assets/cert-linux.png" alt="TQC Linux System Administration Professional certificate" width="963" height="681" loading="lazy"  data-i18n-attrs="{&quot;alt&quot;: &quot;176&quot;}"/>
                 <span class="certification-mask" aria-hidden="true" style="left:34.9%;top:46.7%;width:14.8%;height:4.6%"></span>
               </div></div>
-              <div class="certification-caption"><h3>TQC Linux 系統管理</h3><span class="certification-level">專業級</span></div>
+              <div class="certification-caption"><h3><i18n-text data-i18n="36">TQC Linux System Administration</i18n-text></h3><span class="certification-level"><i18n-text data-i18n="37">Professional</i18n-text></span></div>
             </li>
             <li class="certification-card">
               <div class="certification-image"><div class="certification-photo">
-                <img src="assets/cert-industrial-wiring.png" alt="工業配線丙級技術士證" width="551" height="383" loading="lazy" />
+                <img src="assets/cert-industrial-wiring.png" alt="Class C Industrial Wiring Technician certificate" width="551" height="383" loading="lazy"  data-i18n-attrs="{&quot;alt&quot;: &quot;177&quot;}"/>
                 <span class="certification-mask" aria-hidden="true" style="left:18.3%;top:28.7%;width:23.8%;height:8.4%"></span>
               </div></div>
-              <div class="certification-caption"><h3>工業配線技術士</h3><span class="certification-level">丙級</span></div>
+              <div class="certification-caption"><h3><i18n-text data-i18n="38">Industrial Wiring Technician</i18n-text></h3><span class="certification-level"><i18n-text data-i18n="39">Class C</i18n-text></span></div>
             </li>
             <li class="certification-card">
               <div class="certification-image"><div class="certification-photo">
-                <img src="assets/cert-indoor-wiring.png" alt="室內配線丙級技術士證" width="568" height="391" loading="lazy" />
+                <img src="assets/cert-indoor-wiring.png" alt="Class C Interior Wiring Technician certificate" width="568" height="391" loading="lazy"  data-i18n-attrs="{&quot;alt&quot;: &quot;178&quot;}"/>
                 <span class="certification-mask" aria-hidden="true" style="left:18.0%;top:30.3%;width:23.3%;height:8.8%"></span>
                 <span class="certification-mask" aria-hidden="true" style="left:17.8%;top:51.2%;width:24.9%;height:9.0%"></span>
               </div></div>
-              <div class="certification-caption"><h3>室內配線技術士</h3><span class="certification-level">丙級</span></div>
+              <div class="certification-caption"><h3><i18n-text data-i18n="40">Interior Wiring Technician</i18n-text></h3><span class="certification-level"><i18n-text data-i18n="39">Class C</i18n-text></span></div>
             </li>
             <li class="certification-card">
               <div class="certification-image"><div class="certification-photo">
-                <img src="assets/cert-amateur-radio.png" alt="業餘無線電人員二等執照" width="576" height="376" loading="lazy" />
+                <img src="assets/cert-amateur-radio.png" alt="Class 2 Amateur Radio Operator license" width="576" height="376" loading="lazy"  data-i18n-attrs="{&quot;alt&quot;: &quot;179&quot;}"/>
                 <span class="certification-mask" aria-hidden="true" style="left:24.7%;top:25.3%;width:31.1%;height:8.0%"></span>
                 <span class="certification-mask" aria-hidden="true" style="left:53.7%;top:89.0%;width:23.6%;height:7.4%"></span>
               </div></div>
-              <div class="certification-caption"><h3>業餘無線電人員執照</h3><span class="certification-level">二等</span></div>
+              <div class="certification-caption"><h3><i18n-text data-i18n="41">Amateur Radio Operator License</i18n-text></h3><span class="certification-level"><i18n-text data-i18n="42">Class 2</i18n-text></span></div>
             </li>
             <li class="certification-card">
               <div class="certification-image"><div class="certification-photo">
-                <img src="assets/cert-first-aid.png" alt="紅十字會急救員訓練證書" width="404" height="271" loading="lazy" />
+                <img src="assets/cert-first-aid.png" alt="Red Cross First Aid Training certificate" width="404" height="271" loading="lazy"  data-i18n-attrs="{&quot;alt&quot;: &quot;180&quot;}"/>
               </div></div>
-              <div class="certification-caption"><h3>紅十字會急救員訓練</h3><span class="certification-level">訓練證書</span></div>
+              <div class="certification-caption"><h3><i18n-text data-i18n="43">Red Cross First Aid Training</i18n-text></h3><span class="certification-level"><i18n-text data-i18n="44">Training Certificate</i18n-text></span></div>
             </li>
           </ul>
         </div>
@@ -251,7 +262,7 @@
         aria-labelledby="projects-heading">
         <div class="projects-container">
           <header class="projects-heading">
-            <h2 id="projects-heading">專題作品</h2>
+            <h2 id="projects-heading"><i18n-text data-i18n="1">Projects</i18n-text></h2>
           </header>
           <article
             id="smart-chair"
@@ -259,18 +270,14 @@
             aria-labelledby="chair-heading">
             <div class="project-feature-grid">
               <div class="project-feature-copy">
-                <h3 id="chair-heading">具備 AI 感測的<br />智慧嬰兒安撫搖椅</h3>
+                <h3 id="chair-heading"><i18n-text data-i18n="45">AI-Powered</i18n-text><br /><i18n-text data-i18n="46">Smart Baby Soothing Chair</i18n-text></h3>
                 <p>
-                  為減輕家長照顧嬰幼兒的負擔，整合哭聲辨識、感測器、馬達控制與遠端監控，將
-                  AI
-                  與嵌入式系統連結成可操作的照護輔助方案，並可以透過APP輕鬆遠端監控寶寶狀態或是操控智慧搖椅。
+                  <i18n-text data-i18n="47">An assistive care system combining cry recognition, sensors, motor control, and remote monitoring to support parents. AI and embedded systems work together, while a mobile app lets caregivers check the baby&#x27;s status and control the chair remotely.</i18n-text>
                 </p>
                 <div class="project-role">
-                  <h4>我的負責項目</h4>
+                  <h4><i18n-text data-i18n="48">My contributions</i18n-text></h4>
                   <p>
-                    韌體開發、硬體整合、App 串接與模型訓練。整合
-                    UART、I²C、ADC、PWM、GPIO
-                    等介面，並蒐集素材、完成模型訓練與系統測試。
+                    <i18n-text data-i18n="49">Firmware development, hardware integration, app connectivity, and model training. I integrated UART, I²C, ADC, PWM, and GPIO interfaces, collected training materials, trained the model, and tested the system.</i18n-text>
                   </p>
                 </div>
               </div>
@@ -285,23 +292,23 @@
                   poster="assets/baby-demo-poster.jpg"
                   width="400"
                   height="712"
-                  aria-label="實體控制盒操作與搖椅運轉示範">
+                  aria-label="Physical control box and rocking chair demonstration" data-i18n-attrs="{&quot;aria-label&quot;: &quot;181&quot;}">
                   <source src="assets/baby-demo.mp4" type="video/mp4" />
-                  您的瀏覽器不支援影片播放，請<a href="assets/baby-demo.mp4">下載運轉示範影片</a>。
+                  <i18n-text data-i18n="50">Your browser does not support video playback. Please</i18n-text><a href="assets/baby-demo.mp4"><i18n-text data-i18n="51">download the demonstration video</i18n-text></a>。
                 </video>
-                <p>操作手動按鈕，展示搖椅運轉與指示燈狀態。</p>
+                <p><i18n-text data-i18n="52">Manual controls demonstrate chair operation and indicator lights.</i18n-text></p>
               </figure>
             </div>
-            <div class="project-video-gallery" aria-label="智慧搖椅影片介紹">
+            <div class="project-video-gallery" aria-label="Smart chair videos" data-i18n-attrs="{&quot;aria-label&quot;: &quot;182&quot;}">
               <a
                 class="video-popup-card video-text-card"
                 href="https://www.youtube.com/watch?v=qPTFQcEjoJ0"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-video-modal="https://www.youtube.com/embed/qPTFQcEjoJ0?si=CdpILEKHOkKUIGP4"
-                data-video-title="比賽影片（開發中）"
+                data-video-title="Competition Video (In Development)"
                 aria-haspopup="dialog"
-                aria-label="播放智慧搖椅比賽影片（開發中）">
+                aria-label="Play smart chair competition video (in development)" data-i18n-attrs="{&quot;data-video-title&quot;: &quot;183&quot;, &quot;aria-label&quot;: &quot;184&quot;}">
                 <span class="video-text-icon" aria-hidden="true"
                   ><svg
                     width="28"
@@ -313,7 +320,7 @@
                     <rect x="3" y="4" width="18" height="16" rx="3" />
                     <path d="m10 8 6 4-6 4Z" /></svg
                 ></span>
-                <span class="video-text-copy"><strong>初賽影片</strong></span>
+                <span class="video-text-copy"><strong><i18n-text data-i18n="53">Preliminary Round Video</i18n-text></strong></span>
                 <span class="video-window-icon" aria-hidden="true">↗</span>
               </a>
               <a
@@ -322,9 +329,9 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 data-video-modal="https://www.youtube.com/embed/Q_i-0MXFGY8?si=wt_Yn2ZbrcfCQ9DM"
-                data-video-title="運作測試影片"
+                data-video-title="Operation Test Video"
                 aria-haspopup="dialog"
-                aria-label="播放智慧搖椅運作測試影片">
+                aria-label="Play smart chair operation test video" data-i18n-attrs="{&quot;data-video-title&quot;: &quot;54&quot;, &quot;aria-label&quot;: &quot;185&quot;}">
                 <span class="video-text-icon" aria-hidden="true"
                   ><svg
                     width="28"
@@ -336,29 +343,29 @@
                     <path d="M3 12h4l3-7 4 14 3-7h4" /></svg
                 ></span>
                 <span class="video-text-copy"
-                  ><strong>運作測試影片</strong></span
+                  ><strong><i18n-text data-i18n="54">Operation Test Video</i18n-text></strong></span
                 >
                 <span class="video-window-icon" aria-hidden="true">↗</span>
               </a>
             </div>
             <section class="project-tech" aria-labelledby="chair-tech-heading">
-              <h4 id="chair-tech-heading">技術</h4>
+              <h4 id="chair-tech-heading"><i18n-text data-i18n="55">Technologies</i18n-text></h4>
               <dl class="project-tech-grid">
-                <div class="project-tech-item"><dt>AI 辨識</dt><dd>Edge Impulse｜哭聲辨識</dd></div>
-                <div class="project-tech-item"><dt>韌體開發</dt><dd>ARM Cortex｜Keil µVision 5</dd></div>
-                <div class="project-tech-item"><dt>I/O 整合</dt><dd>UART：ESP12F、DFPlayer<br />I²C：IMU<br />ADC：FSR、MIC<br />PWM：L298N<br />GPIO：按鈕、LED、安全扣偵測</dd></div>
-                <div class="project-tech-item"><dt>電路製作</dt><dd>Altium｜自行刻電路板</dd></div>
-                <div class="project-tech-item"><dt>外殼製作</dt><dd>3D 列印</dd></div>
-                <div class="project-tech-item"><dt>App 開發</dt><dd>Flutter｜Material Design</dd></div>
+                <div class="project-tech-item"><dt><i18n-text data-i18n="56">AI Recognition</i18n-text></dt><dd><i18n-text data-i18n="57">Edge Impulse | Cry recognition</i18n-text></dd></div>
+                <div class="project-tech-item"><dt><i18n-text data-i18n="58">Firmware</i18n-text></dt><dd>ARM Cortex｜Keil µVision 5</dd></div>
+                <div class="project-tech-item"><dt><i18n-text data-i18n="59">I/O Integration</i18n-text></dt><dd>UART：ESP12F、DFPlayer<br />I²C：IMU<br />ADC：FSR、MIC<br />PWM：L298N<br /><i18n-text data-i18n="60">GPIO: Buttons, LEDs, safety buckle detection</i18n-text></dd></div>
+                <div class="project-tech-item"><dt><i18n-text data-i18n="61">Circuit Fabrication</i18n-text></dt><dd><i18n-text data-i18n="62">Altium | Custom-etched PCB</i18n-text></dd></div>
+                <div class="project-tech-item"><dt><i18n-text data-i18n="63">Enclosure</i18n-text></dt><dd><i18n-text data-i18n="64">3D Printing</i18n-text></dd></div>
+                <div class="project-tech-item"><dt><i18n-text data-i18n="65">App Development</i18n-text></dt><dd>Flutter｜Material Design</dd></div>
               </dl>
             </section>
             <section
               class="project-app-showcase"
               aria-labelledby="chair-app-heading">
               <div class="project-app-heading">
-                <h4 id="chair-app-heading">APP操控</h4>
+                <h4 id="chair-app-heading"><i18n-text data-i18n="66">App Controls</i18n-text></h4>
               </div>
-              <p class="app-demo-intro">使用 Flutter 開發，採用 Google Material Design 元件打造操作介面。</p>
+              <p class="app-demo-intro"><i18n-text data-i18n="67">Built with Flutter and Google Material Design components.</i18n-text></p>
               <div class="app-demo" id="chair-app-demo">
                 <div class="app-phone">
                   <div class="app-phone-top" aria-hidden="true">
@@ -369,9 +376,9 @@
                       <button
                         type="button"
                         data-app-home
-                        aria-label="返回 App 首頁">
+                        aria-label="Back to app home" data-i18n-attrs="{&quot;aria-label&quot;: &quot;186&quot;}">
                         ←</button
-                      ><span id="app-screen-title">安撫椅系統</span
+                      ><span id="app-screen-title"><i18n-text data-i18n="68">Soothing Chair System</i18n-text></span
                       ><span class="app-bar-spacer" aria-hidden="true"></span>
                     </header>
                     <div class="app-screen" id="app-screen"></div>
@@ -396,63 +403,63 @@
                           <path d="m8 12 3 3 5-6" /></svg
                       ></span>
                       <h5 id="app-safety-title">
-                        系統在啟動時會檢查以下安全確認
+                        <i18n-text data-i18n="69">Safety checks before starting</i18n-text>
                       </h5>
                       <p id="app-safety-description">
-                        如為繫上或未做妥，系統不會運作，運轉過程中也會檢查。
+                        <i18n-text data-i18n="70">The chair will only run when all safety checks pass. Checks also continue during operation.</i18n-text>
                       </p>
                       <label class="app-safety-check"
                         ><input type="checkbox" id="app-belt-check" /><span
-                          ><strong>安全帶已扣上</strong
-                          ><small>請確認嬰兒已妥善固定。</small></span
+                          ><strong><i18n-text data-i18n="71">Safety belt fastened</i18n-text></strong
+                          ><small><i18n-text data-i18n="72">Make sure the baby is safely secured.</i18n-text></small></span
                         ></label
                       >
                       <label class="app-safety-check"
                         ><input type="checkbox" id="app-seat-check" /><span
-                          ><strong>模擬嬰兒在座</strong
-                          ><small>切換座位感應器的示範訊號。</small></span
+                          ><strong><i18n-text data-i18n="73">Simulate baby in seat</i18n-text></strong
+                          ><small><i18n-text data-i18n="74">Toggle the simulated seat sensor signal.</i18n-text></small></span
                         ></label
                       >
                       <button type="button" data-app-confirm disabled>
-                        確認並啟動
+                        <i18n-text data-i18n="75">Confirm &amp; Start</i18n-text>
                       </button>
-                      <button type="button" data-app-cancel>取消</button>
+                      <button type="button" data-app-cancel><i18n-text data-i18n="76">Cancel</i18n-text></button>
                     </div>
                   </div>
                 </div>
                 <aside class="app-demo-guide">
-                  <h5>試試看吧</h5>
-                  <nav class="app-demo-nav" aria-label="App 展示頁面">
-                    <button type="button" data-app-view="home">首頁</button>
+                  <h5><i18n-text data-i18n="77">Try it out</i18n-text></h5>
+                  <nav class="app-demo-nav" aria-label="App demo pages" data-i18n-attrs="{&quot;aria-label&quot;: &quot;187&quot;}">
+                    <button type="button" data-app-view="home"><i18n-text data-i18n="78">Home</i18n-text></button>
                     <button type="button" data-app-view="control">
-                      搖椅控制
+                      <i18n-text data-i18n="79">Chair Controls</i18n-text>
                     </button>
                     <button type="button" data-app-view="music">
-                      音樂播放
+                      <i18n-text data-i18n="80">Music</i18n-text>
                     </button>
                     <button type="button" data-app-view="records">
-                      哭聲紀錄
+                      <i18n-text data-i18n="81">Cry Records</i18n-text>
                     </button>
                   </nav>
                   <div id="app-guide-content"></div>
                 </aside>
               </div>
-              <noscript><p>請開啟 JavaScript 以體驗互動 App。</p></noscript>
+              <noscript><p><i18n-text data-i18n="82">Enable JavaScript to try the interactive app.</i18n-text></p></noscript>
             </section>
             <section class="project-awards" aria-labelledby="chair-awards-heading">
-              <h4 id="chair-awards-heading">獲獎紀錄</h4>
+              <h4 id="chair-awards-heading"><i18n-text data-i18n="83">Awards</i18n-text></h4>
               <div class="project-awards-grid">
                 <figure class="project-award-card">
-                  <img src="assets/p2-1.png" alt="盛群盃創意大賽銅牌得獎合照" width="875" height="656" loading="lazy" />
-                  <figcaption><span class="project-award-result">銅牌</span><h5>盛群盃創意大賽</h5></figcaption>
+                  <img src="assets/p2-1.png" alt="Team photo after winning bronze at the Holtek MCU Contest" width="875" height="656" loading="lazy"  data-i18n-attrs="{&quot;alt&quot;: &quot;188&quot;}"/>
+                  <figcaption><span class="project-award-result"><i18n-text data-i18n="19">Bronze</i18n-text></span><h5><i18n-text data-i18n="84">Holtek MCU Contest</i18n-text></h5></figcaption>
                 </figure>
                 <figure class="project-award-card">
-                  <img src="assets/晶心.jpg" alt="晶心盃應用組銅牌團隊合照" width="895" height="671" loading="lazy" />
-                  <figcaption><span class="project-award-result">銅牌</span><h5>晶心盃應用組</h5></figcaption>
+                  <img src="assets/晶心.jpg" alt="Andes Competition application category bronze team photo" width="895" height="671" loading="lazy"  data-i18n-attrs="{&quot;alt&quot;: &quot;189&quot;}"/>
+                  <figcaption><span class="project-award-result"><i18n-text data-i18n="19">Bronze</i18n-text></span><h5><i18n-text data-i18n="85">Andes Competition — Application Category</i18n-text></h5></figcaption>
                 </figure>
                 <figure class="project-award-card">
-                  <img src="assets/專題競賽.png" alt="校內專題競賽佳作獎狀" width="414" height="590" loading="lazy" />
-                  <figcaption><span class="project-award-result">佳作</span><h5>校內專題競賽</h5></figcaption>
+                  <img src="assets/專題競賽.png" alt="University Project Competition Honorable Mention certificate" width="414" height="590" loading="lazy"  data-i18n-attrs="{&quot;alt&quot;: &quot;190&quot;}"/>
+                  <figcaption><span class="project-award-result"><i18n-text data-i18n="28">Honorable Mention</i18n-text></span><h5><i18n-text data-i18n="86">University Project Competition</i18n-text></h5></figcaption>
                 </figure>
               </div>
             </section>
@@ -463,83 +470,81 @@
             aria-labelledby="campus-heading">
             <div class="project-feature-grid">
               <div class="project-feature-copy">
-                <h3 id="campus-heading">AI 校園衝突與<br />暴力行為辨識系統</h3>
+                <h3 id="campus-heading"><i18n-text data-i18n="87">AI Campus Conflict &amp;</i18n-text><br /><i18n-text data-i18n="88">Violence Detection System</i18n-text></h3>
                 <p>
-                  結合 YOLO11 Pose 與
-                  LSTM，分析連續影格中的人體骨骼特徵，辨識疑似打架、推擠與拉扯等異常互動，並記錄事件時間、辨識結果與信心度。
+                  <i18n-text data-i18n="89">Combines YOLO11 Pose and LSTM to analyze body keypoints across consecutive frames, detect suspected fighting, pushing, and pulling, and record event times, predictions, and confidence scores.</i18n-text>
                 </p>
                 <div class="project-role">
-                  <h4>我的負責項目</h4>
+                  <h4><i18n-text data-i18n="48">My contributions</i18n-text></h4>
                   <p>
-                    資料蒐集、前處理與模型訓練。建立影片匯入、骨骼擷取、正規化、時序切片與標記的自動化流程，並參與即時推論、FastAPI
-                    後端及網頁介面整合。
+                    <i18n-text data-i18n="90">Data collection, preprocessing, and model training. I built an automated pipeline for video import, pose extraction, normalization, temporal segmentation, and labeling, and helped integrate real-time inference, a FastAPI backend, and the web interface.</i18n-text>
                   </p>
                 </div>
                 <div class="project-role">
-                  <h4>設計與驗證</h4>
+                  <h4><i18n-text data-i18n="91">Design &amp; Validation</i18n-text></h4>
                   <p>
-                    使用骨骼關鍵點作為辨識輸入，降低對臉部與外觀特徵的依賴，並針對多人、遮擋與不同拍攝環境進行測試。
+                    <i18n-text data-i18n="92">Uses body keypoints as input to reduce reliance on faces and appearance. Tested with multiple people, occlusion, and different filming environments.</i18n-text>
                   </p>
                 </div>
               </div>
               <figure class="project-demo-image">
                 <img
                   src="assets/fight_LSTM.png"
-                  alt="校園行為辨識系統的姿態分析與事件紀錄介面"
+                  alt="Campus behavior detection system pose analysis and event logging interface"
                   width="476"
                   height="239"
-                  loading="lazy" />
+                  loading="lazy"  data-i18n-attrs="{&quot;alt&quot;: &quot;191&quot;}"/>
                 <figcaption>
-                  骨骼姿態分析、異常行為辨識與事件紀錄介面
+                  <i18n-text data-i18n="93">Pose analysis, abnormal behavior detection, and event logging interface</i18n-text>
                 </figcaption>
               </figure>
             </div>
             <section class="campus-partnership" aria-labelledby="campus-partnership-heading">
-              <h4 id="campus-partnership-heading">校園合作與部署規劃</h4>
-              <p>與高雄地區國小合作進行研發與驗證，規劃將系統部署至校園內，協助辨識疑似衝突與暴力事件，提供校方掌握異常狀況的參考，維護校園安全。</p>
-              <p class="campus-partnership-plan">後續規劃以 Raspberry Pi 進行邊緣部署，驗證系統在校園實際環境中的運作表現。</p>
+              <h4 id="campus-partnership-heading"><i18n-text data-i18n="94">School Collaboration &amp; Deployment Plans</i18n-text></h4>
+              <p><i18n-text data-i18n="95">Collaborating with an elementary school in Kaohsiung on development and validation. Planned campus deployment would help identify suspected conflicts and violence, giving staff information to support school safety.</i18n-text></p>
+              <p class="campus-partnership-plan"><i18n-text data-i18n="96">Future plans include edge deployment on Raspberry Pi to evaluate performance in a real school environment.</i18n-text></p>
             </section>
             <section class="campus-data" aria-labelledby="campus-data-heading">
-              <h4 id="campus-data-heading">資料蒐集與處理流程</h4>
-              <h5>影片資料來源</h5>
+              <h4 id="campus-data-heading"><i18n-text data-i18n="97">Data Collection &amp; Processing</i18n-text></h4>
+              <h5><i18n-text data-i18n="98">Video Sources</i18n-text></h5>
               <ul class="campus-data-sources">
-                <li><strong>AI 影片自動生成與蒐集</strong><span>透過自動化流程生成AI影片，並自動下載、匯入資料集，約佔蒐集影片的 70%。</span></li>
-                <li><strong>網路公開資料集</strong><span>彙整公開影片素材</span></li>
-                <li><strong>自行拍攝模擬影片</strong><span>拍攝模擬行為情境</span></li>
+                <li><strong><i18n-text data-i18n="99">Automated AI Video Generation &amp; Collection</i18n-text></strong><span><i18n-text data-i18n="100">AI videos are generated, downloaded, and imported through an automated pipeline, accounting for approximately 70% of collected videos.</i18n-text></span></li>
+                <li><strong><i18n-text data-i18n="101">Public Datasets</i18n-text></strong><span><i18n-text data-i18n="102">Collect publicly available videos</i18n-text></span></li>
+                <li><strong><i18n-text data-i18n="103">Self-Recorded Simulations</i18n-text></strong><span><i18n-text data-i18n="104">Record simulated behavior scenarios</i18n-text></span></li>
               </ul>
-              <h5>彙整資料後，以 Python 自動化處理</h5>
+              <h5><i18n-text data-i18n="105">Automated processing in Python after collection</i18n-text></h5>
               <ol class="campus-data-flow">
-                <li><strong>影片讀取</strong><span>OpenCV 讀取影片並逐幀擷取。</span></li>
-                <li><strong>骨骼擷取</strong><span>YOLO11 Pose 擷取人體骨骼關鍵點。</span></li>
-                <li><strong>時序建立</strong><span>整理並正規化骨骼座標，建立連續影格時間序列。</span></li>
-                <li><strong>標記與建集</strong><span>標記 FIGHT／NORMAL，建立訓練資料集。</span></li>
-                <li><strong>切分與訓練</strong><span>切分 Training／Validation／Test，進行 LSTM 模型訓練。</span></li>
+                <li><strong><i18n-text data-i18n="106">Video Import</i18n-text></strong><span><i18n-text data-i18n="107">Read videos and extract frames with OpenCV.</i18n-text></span></li>
+                <li><strong><i18n-text data-i18n="108">Pose Extraction</i18n-text></strong><span><i18n-text data-i18n="109">Extract body keypoints with YOLO11 Pose.</i18n-text></span></li>
+                <li><strong><i18n-text data-i18n="110">Sequence Building</i18n-text></strong><span><i18n-text data-i18n="111">Organize and normalize keypoints into temporal sequences.</i18n-text></span></li>
+                <li><strong><i18n-text data-i18n="112">Labeling &amp; Dataset Creation</i18n-text></strong><span><i18n-text data-i18n="113">Label FIGHT / NORMAL samples to build the training dataset.</i18n-text></span></li>
+                <li><strong><i18n-text data-i18n="114">Splitting &amp; Training</i18n-text></strong><span><i18n-text data-i18n="115">Split into training, validation, and test sets, then train the LSTM model.</i18n-text></span></li>
               </ol>
             </section>
             <section class="campus-test-video" aria-labelledby="campus-pose-heading">
-              <h4 id="campus-pose-heading">骨架轉換影片</h4>
+              <h4 id="campus-pose-heading"><i18n-text data-i18n="116">Pose Visualization Videos</i18n-text></h4>
               <div class="campus-pose-grid">
                 <figure>
-                  <video controls autoplay muted loop playsinline preload="metadata" aria-label="衝突行為骨架轉換影片">
+                  <video controls autoplay muted loop playsinline preload="metadata" aria-label="Conflict behavior pose visualization video" data-i18n-attrs="{&quot;aria-label&quot;: &quot;192&quot;}">
                     <source src="assets/fightPose.mp4" type="video/mp4" />
-                    您的瀏覽器不支援影片播放，請<a href="assets/fightPose.mp4">下載衝突行為骨架影片</a>。
+                    <i18n-text data-i18n="50">Your browser does not support video playback. Please</i18n-text><a href="assets/fightPose.mp4"><i18n-text data-i18n="117">Download conflict pose video</i18n-text></a>。
                   </video>
-                  <figcaption>衝突行為骨架</figcaption>
+                  <figcaption><i18n-text data-i18n="118">Conflict Pose Visualization</i18n-text></figcaption>
                 </figure>
                 <figure>
-                  <video controls autoplay muted loop playsinline preload="metadata" aria-label="一般行為骨架轉換影片">
+                  <video controls autoplay muted loop playsinline preload="metadata" aria-label="Normal behavior pose visualization video" data-i18n-attrs="{&quot;aria-label&quot;: &quot;193&quot;}">
                     <source src="assets/NormalPose.mp4" type="video/mp4" />
-                    您的瀏覽器不支援影片播放，請<a href="assets/NormalPose.mp4">下載一般行為骨架影片</a>。
+                    <i18n-text data-i18n="50">Your browser does not support video playback. Please</i18n-text><a href="assets/NormalPose.mp4"><i18n-text data-i18n="119">Download normal behavior pose video</i18n-text></a>。
                   </video>
-                  <figcaption>一般行為骨架</figcaption>
+                  <figcaption><i18n-text data-i18n="120">Normal Behavior Pose Visualization</i18n-text></figcaption>
                 </figure>
               </div>
             </section>
             <section class="campus-test-video" aria-labelledby="campus-test-video-heading">
-              <h4 id="campus-test-video-heading">測試影片</h4>
-              <video controls playsinline preload="metadata" aria-label="AI 校園衝突與暴力行為辨識系統測試影片">
+              <h4 id="campus-test-video-heading"><i18n-text data-i18n="121">Test Video</i18n-text></h4>
+              <video controls playsinline preload="metadata" aria-label="AI campus conflict and violence detection test video" data-i18n-attrs="{&quot;aria-label&quot;: &quot;194&quot;}">
                 <source src="assets/fight.mp4" type="video/mp4" />
-                您的瀏覽器不支援影片播放，請<a href="assets/fight.mp4">下載系統測試影片</a>。
+                <i18n-text data-i18n="50">Your browser does not support video playback. Please</i18n-text><a href="assets/fight.mp4"><i18n-text data-i18n="122">Download system test video</i18n-text></a>。
               </video>
             </section>
           </article>
@@ -551,7 +556,7 @@
         class="timeline-section"
         aria-labelledby="timeline-title">
         <div class="timeline-heading">
-          <h2 id="timeline-title">TimeLine<span>個人生涯</span></h2>
+          <h2 id="timeline-title">Timeline<span><i18n-text data-i18n="2">Timeline</i18n-text></span></h2>
         </div>
         <ol class="timeline">
           <li class="timeline-item timeline-left">
@@ -559,18 +564,16 @@
               <span class="milestone-label"></span>
             </div>
             <article class="timeline-card">
-              <h2>屏東高工<span>電機科</span></h2>
+              <h2><i18n-text data-i18n="123">Pingtung Industrial Vocational High School</i18n-text><span><i18n-text data-i18n="124">Electrical Engineering</i18n-text></span></h2>
               <p>
-                高中就讀電機科期間，我取得了工業配線與室內配線丙級證照，也意外發現自己對軟體開發的熱情。出於好奇，我購買了
-                Udemy
-                網頁開發課程並開始自學程式設計，從此開啟了我踏入資訊工程領域的旅程。
+                <i18n-text data-i18n="125">While studying Electrical Engineering in high school, I earned Class C certifications in industrial and interior wiring and discovered my interest in software development. I bought a web development course on Udemy and began learning programming independently, starting my journey into computer science.</i18n-text>
               </p>
             </article>
           </li>
           <li class="year-divider">
             <div>
-              <h3>大一</h3>
-              <p>大一上學期 — 大一下學期</p>
+              <h3><i18n-text data-i18n="126">Freshman</i18n-text></h3>
+              <p><i18n-text data-i18n="127">Freshman year — Fall &amp; Spring</i18n-text></p>
             </div>
           </li>
           <li class="timeline-item timeline-right">
@@ -578,17 +581,16 @@
               <span class="milestone-label"></span>
             </div>
             <article class="timeline-card">
-              <h2>國立虎尾科技大學<span>資訊工程系</span></h2>
+              <h2><i18n-text data-i18n="10">National Formosa University</i18n-text><span><i18n-text data-i18n="3">Computer Science &amp; Information Engineering</i18n-text></span></h2>
               <p>
-                從高中自學網頁開發，到大學正式踏入資訊工程領域，我持續探索程式設計的各種可能。除了累積軟體開發與演算法基礎，也嘗試結合過去的電機背景，投入
-                AI 與嵌入式系統開發，享受將想法一步步實現的過程。
+                <i18n-text data-i18n="128">From teaching myself web development in high school to studying computer science at university, I have continued exploring programming. Alongside software and algorithm fundamentals, I apply my electrical engineering background to AI and embedded systems, turning ideas into working projects.</i18n-text>
               </p>
             </article>
           </li>
           <li class="year-divider">
             <div>
-              <h3>大二</h3>
-              <p>大二上學期 — 大二下學期</p>
+              <h3><i18n-text data-i18n="129">Sophomore</i18n-text></h3>
+              <p><i18n-text data-i18n="130">Sophomore year — Fall &amp; Spring</i18n-text></p>
             </div>
           </li>
           <li class="timeline-item project-item timeline-left">
@@ -596,13 +598,12 @@
               <span class="milestone-label"></span>
             </div>
             <article class="timeline-card">
-              <h2><span>畢業專題</span>AI 智慧嬰兒安撫搖椅</h2>
+              <h2><span><i18n-text data-i18n="131">Capstone Project</i18n-text></span><i18n-text data-i18n="132">AI Smart Baby Soothing Chair</i18n-text></h2>
               <p>
-                整合哭聲辨識、嵌入式控制與遠端監控，負責韌體、硬體整合、App
-                串接與模型訓練。
+                <i18n-text data-i18n="133">Integrated cry recognition, embedded control, and remote monitoring. Responsible for firmware, hardware integration, app connectivity, and model training.</i18n-text>
               </p>
               <a class="project-detail-link" href="#smart-chair"
-                >查看專題介紹與影片 <span aria-hidden="true">↗</span></a
+                ><i18n-text data-i18n="134">Explore the project &amp; videos</i18n-text> <span aria-hidden="true">↗</span></a
               >
             </article>
           </li>
@@ -614,16 +615,16 @@
               <div class="card-image award-image">
                 <img
                   src="assets/p2-1.png"
-                  alt="第 20 屆盛群盃創意大賽團隊領獎合影"
+                  alt="Team receiving an award at the 20th Holtek MCU Contest"
                   width="191"
                   height="188"
-                  loading="lazy" />
+                  loading="lazy"  data-i18n-attrs="{&quot;alt&quot;: &quot;195&quot;}"/>
               </div>
               <div class="card-content">
-                <span class="award-badge">銅牌 / BRONZE</span>
-                <h2>第 20 屆盛群盃創意大賽<span>專題競賽銅牌</span></h2>
+                <span class="award-badge"><i18n-text data-i18n="135">BRONZE</i18n-text></span>
+                <h2><i18n-text data-i18n="136">20th Holtek MCU Contest</i18n-text><span><i18n-text data-i18n="137">Project Competition — Bronze</i18n-text></span></h2>
                 <p>
-                  歷經整個暑假及開學後的課餘時間持續投入開發，終於完成系統整合與實作，並在競賽中榮獲銅牌。作品更獲得評審高度肯定，認為系統完成度高，具備實際應用價值與商業化潛力。
+                  <i18n-text data-i18n="138">After developing the project throughout the summer and outside class, we completed the integrated system and won bronze. The judges praised its completeness, practical value, and commercialization potential.</i18n-text>
                 </p>
               </div>
             </article>
@@ -636,31 +637,31 @@
               <div class="card-image award-image award-gallery">
                 <img
                   src="assets/晶心.jpg"
-                  alt="2025 晶心盃應用組團隊與作品合影"
+                  alt="2025 Andes Competition application category team and project photo"
                   width="895"
                   height="671"
-                  loading="lazy" />
+                  loading="lazy"  data-i18n-attrs="{&quot;alt&quot;: &quot;196&quot;}"/>
                 <img
                   class="trophy-photo"
                   src="assets/andes-cup-2025-bronze.jpg"
-                  alt="2025 晶心盃應用組銅牌獎杯"
+                  alt="2025 Andes Competition application category bronze trophy"
                   width="302"
                   height="560"
-                  loading="lazy" />
+                  loading="lazy"  data-i18n-attrs="{&quot;alt&quot;: &quot;197&quot;}"/>
               </div>
               <div class="card-content">
-                <span class="award-badge">銅牌 / BRONZE</span>
-                <h2>晶心盃應用組<span>專題競賽銅牌</span></h2>
+                <span class="award-badge"><i18n-text data-i18n="135">BRONZE</i18n-text></span>
+                <h2><i18n-text data-i18n="85">Andes Competition — Application Category</i18n-text><span><i18n-text data-i18n="137">Project Competition — Bronze</i18n-text></span></h2>
                 <p>
-                  再度帶著智慧嬰兒安撫搖椅參加晶心盃專題競賽，並再次榮獲銅牌，為團隊的努力增添一份肯定。
+                  <i18n-text data-i18n="139">We entered the smart baby soothing chair in the Andes Competition and earned another bronze award in recognition of the team&#x27;s work.</i18n-text>
                 </p>
               </div>
             </article>
           </li>
           <li class="year-divider">
             <div>
-              <h3>大三</h3>
-              <p>大三上學期 — 大三下學期</p>
+              <h3><i18n-text data-i18n="140">Junior</i18n-text></h3>
+              <p><i18n-text data-i18n="141">Junior year — Fall &amp; Spring</i18n-text></p>
             </div>
           </li>
           <li class="timeline-item timeline-right">
@@ -671,15 +672,14 @@
               <div class="card-image presentation-image">
                 <img
                   src="assets/TA.png"
-                  alt="黃安可擔任 Python 教學助理，於電腦教室協助同學進行程式實作"
+                  alt="An-Ke Huang assisting students with Python programming in the computer lab"
                   width="451"
                   height="336"
-                  loading="lazy" />
+                  loading="lazy"  data-i18n-attrs="{&quot;alt&quot;: &quot;198&quot;}"/>
               </div>
-              <h2>Python 程式課程<span>教學助理</span></h2>
+              <h2><i18n-text data-i18n="142">Python Programming Lab</i18n-text><span><i18n-text data-i18n="22">Teaching Assistant</i18n-text></span></h2>
               <p>
-                擔任 Python
-                程式實習課程教學助理，協助同學理解程式語法與邏輯、解決課堂實作問題，並協助授課老師進行作業批改與課堂教學，從中培養技術溝通與問題解決能力。
+                <i18n-text data-i18n="143">Served as a Python programming lab teaching assistant, helping students understand syntax and logic and solve programming exercises. Supported grading and classroom instruction while developing technical communication and problem-solving skills.</i18n-text>
               </p>
             </article>
           </li>
@@ -691,17 +691,16 @@
               <div class="card-image presentation-image">
                 <img
                   src="assets/p2-7.png"
-                  alt="智慧嬰兒安撫搖椅專題成果簡報"
+                  alt="Smart baby soothing chair project presentation"
                   width="420"
                   height="213"
-                  loading="lazy" />
+                  loading="lazy"  data-i18n-attrs="{&quot;alt&quot;: &quot;199&quot;}"/>
               </div>
               <div class="card-content">
-                <span class="award-badge">佳作 / HONORABLE MENTION</span>
-                <h2>2025校內專題競賽<span>專題競賽銅牌</span></h2>
+                <span class="award-badge"><i18n-text data-i18n="144">HONORABLE MENTION</i18n-text></span>
+                <h2><i18n-text data-i18n="145">2025 University Project Competition</i18n-text><span><i18n-text data-i18n="137">Project Competition — Bronze</i18n-text></span></h2>
                 <p>
-                  在國立虎尾科技大學校內成果發表暨專題競賽中，以智慧嬰兒安撫搖椅專題獲得專題競賽佳作。<br />上下學期專題成績分別為
-                  93分、92分
+                  <i18n-text data-i18n="146">The smart baby soothing chair received an Honorable Mention at National Formosa University&#x27;s project exhibition and competition.</i18n-text><br /><i18n-text data-i18n="147">Project grades: 93 and 92 in the two semesters</i18n-text>
                 </p>
               </div>
             </article>
@@ -711,21 +710,20 @@
               <span class="milestone-label"></span>
             </div>
             <article class="timeline-card">
-              <span class="award-badge">研發階段</span>
-              <h2>AI 校園衝突與<span>暴力行為辨識系統</span></h2>
+              <span class="award-badge"><i18n-text data-i18n="148">In Development</i18n-text></span>
+              <h2><i18n-text data-i18n="87">AI Campus Conflict &amp;</i18n-text><span><i18n-text data-i18n="88">Violence Detection System</i18n-text></span></h2>
               <p>
-                以 YOLO11 Pose 與 LSTM
-                建立骨骼行為辨識流程，負責自動化資料處理、模型訓練，並參與後端整合。
+                <i18n-text data-i18n="149">Built a pose-based behavior recognition pipeline with YOLO11 Pose and LSTM. Responsible for automated data processing and model training; also contributed to backend integration.</i18n-text>
               </p>
               <a class="project-detail-link" href="#campus-detection"
-                >查看專題介紹 <span aria-hidden="true">↗</span></a
+                ><i18n-text data-i18n="150">Explore the project</i18n-text> <span aria-hidden="true">↗</span></a
               >
             </article>
           </li>
           <li class="year-divider">
             <div>
-              <h3>大四</h3>
-              <p>大四實習與競賽</p>
+              <h3><i18n-text data-i18n="151">Senior</i18n-text></h3>
+              <p><i18n-text data-i18n="152">Senior-year Internship &amp; Competitions</i18n-text></p>
             </div>
           </li>
           <li class="parallel-period">
@@ -743,27 +741,26 @@
                   <div class="card-image internship-image">
                     <img
                       src="assets/PanasonicWork.png"
-                      alt="松下電腦 IT 實習工作紀錄"
+                      alt="Panasonic IT internship work photo"
                       width="236"
                       height="185"
-                      loading="lazy" />
+                      loading="lazy"  data-i18n-attrs="{&quot;alt&quot;: &quot;200&quot;}"/>
                   </div>
                   <div class="card-content">
                     <span class="award-badge"
-                      >2026 / 07 / 01 起 · 全學年實習</span
+                      ><i18n-text data-i18n="153">From 2026 / 07 / 01 · Full academic year</i18n-text></span
                     >
-                    <h2>松下電腦<span>IT 實習</span></h2>
+                    <h2><i18n-text data-i18n="154">Panasonic</i18n-text><span><i18n-text data-i18n="155">IT Internship</i18n-text></span></h2>
                     <p>
-                      加入台灣松下電腦生產技術部 DX
-                      數位化課，參與內部資訊系統維護、強固型電腦與周邊設備測試自動化，並開發與維護測試腳本，累積製造業現場的系統開發與交流經驗。
+                      <i18n-text data-i18n="156">Joined the DX section of Panasonic Taiwan&#x27;s Production Engineering Department. Work includes internal system maintenance, test automation for rugged computers and peripherals, and developing and maintaining test scripts, gaining hands-on experience in manufacturing systems and collaboration.</i18n-text>
                     </p>
                   </div>
                 </article>
                 <div class="internship-continuation">
                   <article class="timeline-card internship-status">
                     <span class="ongoing-dots" aria-hidden="true">⋯</span>
-                    <h2>目前正在實習中</h2>
-                    <p>松下電腦 IT 實習</p>
+                    <h2><i18n-text data-i18n="157">Internship in Progress</i18n-text></h2>
+                    <p><i18n-text data-i18n="158">Panasonic IT Internship</i18n-text></p>
                   </article>
                 </div>
               </li>
@@ -778,14 +775,14 @@
                   <div class="card-image presentation-image icpc-photo">
                     <img
                       src="assets/ICPC.jpg"
-                      alt="ICPC 程式競賽三位參賽團隊成員合影"
+                      alt="Three ICPC programming contest team members"
                       width="4000"
                       height="3000"
-                      loading="lazy" />
+                      loading="lazy"  data-i18n-attrs="{&quot;alt&quot;: &quot;201&quot;}"/>
                   </div>
-                  <span class="award-badge">佳作 / HONORABLE MENTION</span>
-                  <h2>ICPC 程式競賽<span>佳作</span></h2>
-                  <p>參加全國程式競賽，獲得佳作。</p>
+                  <span class="award-badge"><i18n-text data-i18n="144">HONORABLE MENTION</i18n-text></span>
+                  <h2><i18n-text data-i18n="159">ICPC Programming Contest</i18n-text><span><i18n-text data-i18n="28">Honorable Mention</i18n-text></span></h2>
+                  <p><i18n-text data-i18n="160">Received an Honorable Mention in the national programming contest.</i18n-text></p>
                 </article>
               </li>
               <li class="timeline-item programming-entry latest">
@@ -796,9 +793,9 @@
                   <span class="milestone-label"></span>
                 </div>
                 <article class="timeline-card">
-                  <span class="award-badge">晉級全國賽 / QUALIFIED</span>
-                  <h2>NCPC 程式競賽<span>晉級全國賽</span></h2>
-                  <p>成功晉級全國賽。</p>
+                  <span class="award-badge"><i18n-text data-i18n="161">QUALIFIED FOR NATIONAL FINALS</i18n-text></span>
+                  <h2><i18n-text data-i18n="162">NCPC Programming Contest</i18n-text><span><i18n-text data-i18n="29">National finalist</i18n-text></span></h2>
+                  <p><i18n-text data-i18n="163">Qualified for the national finals.</i18n-text></p>
                 </article>
               </li>
             </ol>
@@ -820,26 +817,26 @@
               <path d="M12 5.5v15M5 8h4M5 11h4M15 8h4M15 11h4" />
             </svg>
           </span>
-          <p>持續學習，繼續向前。</p>
+          <p><i18n-text data-i18n="164">Keep learning. Keep moving forward.</i18n-text></p>
         </div>
       </section>
     </main>
     <dialog class="email-dialog" id="email-dialog" aria-labelledby="email-dialog-title" aria-describedby="email-dialog-description">
       <form method="dialog" class="email-dialog-header">
-        <h2 id="email-dialog-title">聯絡我</h2>
-        <button class="email-dialog-close" aria-label="關閉信箱視窗" value="close">×</button>
+        <h2 id="email-dialog-title"><i18n-text data-i18n="165">Contact Me</i18n-text></h2>
+        <button class="email-dialog-close" aria-label="Close email dialog" value="close" data-i18n-attrs="{&quot;aria-label&quot;: &quot;202&quot;}">×</button>
       </form>
-      <p id="email-dialog-description">歡迎聯繫，聊聊實習機會或專案合作。</p>
-      <label class="email-dialog-label" for="contact-email">電子信箱</label>
+      <p id="email-dialog-description"><i18n-text data-i18n="166">Get in touch about internship opportunities or project collaboration.</i18n-text></p>
+      <label class="email-dialog-label" for="contact-email"><i18n-text data-i18n="167">Email</i18n-text></label>
       <input id="contact-email" class="email-dialog-address" type="text" value="a9403230430amos@gmail.com" readonly />
       <div class="email-dialog-actions">
-        <button class="email-action" type="button" data-copy-email>複製信箱</button>
-        <a class="email-action email-action-primary" href="mailto:a9403230430amos@gmail.com">傳送郵件 <span aria-hidden="true">↗</span></a>
+        <button class="email-action" type="button" data-copy-email><i18n-text data-i18n="168">Copy Email</i18n-text></button>
+        <a class="email-action email-action-primary" href="mailto:a9403230430amos@gmail.com"><i18n-text data-i18n="169">Send Email</i18n-text> <span aria-hidden="true">↗</span></a>
       </div>
       <p class="email-dialog-status" role="status" aria-live="polite"></p>
     </dialog>
     <footer>
-      <span>黃安可 · AN-KE HUANG</span><a href="#top">回到頂端 ↑</a>
+      <span><i18n-text data-i18n="170">An-Ke Huang · PORTFOLIO</i18n-text></span><a href="#top"><i18n-text data-i18n="171">Back to top ↑</i18n-text></a>
     </footer>
     <script src="app-demo.js" defer></script>
   </body>

@@ -265,6 +265,13 @@
   document.body.append(modal);
   const frame = modal.querySelector('.video-inline-player');
   let previousOverflow;
+  document.addEventListener('languagechange', () => {
+    if (!activeTrigger || !modal.open) return;
+    const title = window.siteLanguage.translate(`智慧搖椅｜${activeTrigger.dataset.videoTitle}`);
+    modal.querySelector('#video-modal-title').textContent = title;
+    const player = frame.querySelector('iframe');
+    if (player) player.title = title;
+  });
   triggers.forEach(trigger => trigger.addEventListener('click', event => {
     if (event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
     event.preventDefault();

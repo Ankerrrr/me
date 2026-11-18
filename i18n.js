@@ -1180,6 +1180,14 @@
   [
     "於 2026 年 11 月 17 日取得 Microsoft SC-900 認證，具備安全性、合規性與身分識別的基礎知識。",
     "Earned the Microsoft SC-900 certification on November 17, 2026, demonstrating foundational knowledge of security, compliance, and identity."
+  ],
+  [
+    "自傳",
+    "Autobiography"
+  ],
+  [
+    "詳細",
+    "Details"
   ]
 ];
   const languageStorageKey = 'anke-portfolio-language';

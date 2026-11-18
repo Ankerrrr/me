@@ -1,7 +1,7 @@
 (() => {
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const selectors = [
-    '#profile-name', '.profile-bio > p', '.profile-facts > div',
+    '#profile-name', '.profile-bio-heading', '#profile-details-heading', '.profile-bio > p', '.profile-facts > div',
     '.profile-highlights > li', '.profile-links > a',
     '.certifications-container > h2', '.certification-card', '.projects-heading',
     '.project-feature-copy', '.project-prototype', '.project-demo-image',

@@ -1164,6 +1164,22 @@
   [
     "專題競賽佳作",
     "Project Competition — Honorable Mention"
+  ],
+  [
+    "Microsoft 認證：安全性、合規性和身分識別基本概念",
+    "Microsoft Certified: Security, Compliance, and Identity Fundamentals"
+  ],
+  [
+    "Microsoft Certified Fundamentals 認證徽章",
+    "Microsoft Certified Fundamentals badge"
+  ],
+  [
+    "查看認證",
+    "View credential"
+  ],
+  [
+    "於 2026 年 11 月 17 日取得 Microsoft SC-900 認證，具備安全性、合規性與身分識別的基礎知識。",
+    "Earned the Microsoft SC-900 certification on November 17, 2026, demonstrating foundational knowledge of security, compliance, and identity."
   ]
 ];
   const languageStorageKey = 'anke-portfolio-language';

@@ -40,7 +40,7 @@ html[lang="en"] .highlight-rank-row{flex-wrap:wrap;white-space:normal;gap:6px 10
 /* A short dashed continuation directly below the internship card. */
 .parallel-period{position:relative;list-style:none}
 .parallel-events{list-style:none;position:relative;margin:0;padding:0}
-.parallel-events .programming-entry .timeline-card{grid-column:1}
+.parallel-events .programming-entry .timeline-card,.parallel-events .certification-entry .timeline-card{grid-column:1}
 .internship-continuation{grid-column:3;grid-row:2;position:relative;padding-top:36px}
 .internship-continuation::before{content:"";position:absolute;left:50%;top:0;height:36px;border-left:2px dashed var(--pink);transform:translateX(-50%)}
 .parallel-events .internship-branch .internship-status{padding:15px 22px;background:var(--pink-soft);border:1px dashed #cf938b;box-shadow:none;text-align:center}
@@ -48,7 +48,7 @@ html[lang="en"] .highlight-rank-row{flex-wrap:wrap;white-space:normal;gap:6px 10
 .internship-status .ongoing-dots{display:block;color:var(--accent);font:600 2.625rem/1 var(--serif);letter-spacing:.2em;margin-bottom:6px}
 .internship-status h2{font-size:1.275rem;margin:0 0 4px}
 .internship-status p{font-size:0.825rem}
-@media(max-width:800px){.parallel-events .programming-entry .timeline-card,.internship-continuation{grid-column:2}}
+@media(max-width:800px){.parallel-events .programming-entry .timeline-card,.parallel-events .certification-entry .timeline-card,.internship-continuation{grid-column:2}}
 @media(max-width:480px){.parallel-events .internship-branch .internship-status{padding:15px 12px}.internship-status h2{font-size:1.125rem}.internship-status p{font-size:0.75rem}}
 
 /* Keep the campus behavior detection project on the left. */
@@ -279,6 +279,12 @@ html{scroll-padding-top:calc(var(--site-header-height,110px) + 16px)}
 .certification-caption{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px}
 .certification-card h3{margin:0;font-size:1rem;font-weight:600;line-height:1.7;color:#80584f}
 .certification-level{flex-shrink:0;padding:3px 9px;border:1px solid #d8b6a5;border-radius:4px;background:#f4e2d8;color:#80584f;font-size:.8125rem}
+.certification-link{display:flex;flex-direction:column;height:100%;color:inherit;text-decoration:none}
+.certification-link:focus-visible{outline:3px solid #80584f;outline-offset:-4px;border-radius:10px}
+.certification-image-microsoft{position:relative;justify-content:center}
+.certification-image-microsoft img{position:absolute;inset:12px;display:block;width:calc(100% - 24px);height:calc(100% - 24px);object-fit:contain}
+.certification-verification{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin:auto 0 0;padding:0 18px 18px;color:#80584f;font-size:.8125rem}
+.certification-verification>span{text-decoration:underline;text-underline-offset:3px}
 @media(max-width:900px){.certifications-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.certifications-section{padding:32px 20px}.certifications-grid{grid-template-columns:minmax(0,1fr)}.certifications-container>h2{font-size:1.75rem}}
 .header-navigation{display:flex;gap:26px;align-items:center}
